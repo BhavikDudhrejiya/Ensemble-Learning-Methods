@@ -28,17 +28,17 @@ F. What are the pro and cons of Bagging?: It reduce the overfitting problem. It 
 
 # Boosting
 
-A. What is Boosting ?
+A. What is Boosting ?:
 1. It is an ensemble machine learning technique.
 2. It is a process that uses a set of machine learning algorithms to combine weak learners and form a strong learn in order to increase the accuracy of the model.
 
-B. Purpose of Boosting ?
+B. Purpose of Boosting ?:
 It takes a models with high bias and low variance and reduce their bias without decreasing their variance.
 
-C. Why Boosting is used ?
+C. Why Boosting is used ?:
 Classic model build on the single or individual rule. Single rule mean creating model on a whole dataset. Single rules a not enough to make a strong prediction. It is also called weak rule or weak learner. Boosting technique helps us to create all weak learner and combine them to make it strong which predict better accuracy.
 
-D. How Does Boosting Algorithm works ?
+D. How Does Boosting Algorithm works ?:
 1. We have a data.
 2. Assigned equal weights to each data.
 3. Iteration process will run untile all the misclassification converted into correctly classification:
@@ -52,4 +52,6 @@ D. How Does Boosting Algorithm works ?
 5.Predicting on the model.
 6.Collecting the output.
 7.Considering the majority vote as a final output.
-   11. 
+
+E. Types of Boosting ?
+
