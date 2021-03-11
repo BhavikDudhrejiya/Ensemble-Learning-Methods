@@ -9,7 +9,7 @@ A. What is Bagging ?:
 4. It is a bootstrap sampling + aggregation(aggragation of vote)
 
 B. Purpose of using Bagging:
-1. It takes a models with high variance and low bias and reduced their variance without decreasing their bais.
+1. It takes a models with high variance and low bias and reduce their variance without decreasing their bais.
 
 C. What is Bootstrap ?:
 1. Boostrap refers to a random sampling with replacement. 
