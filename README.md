@@ -24,4 +24,4 @@ Selecting same observation multiple time.
 E. What is Aggregation ?:
 Aggregate the outcome to each sample to estimate the most possible accurate statistics for overall sample.
 
-F. What are the pro and cons of Bagging?: It reduce the overfitting problem. It means Bagging handle the data have high variance and low bais. Bagging is not helpful in case of high bais.
+F. What are the pro and cons of Bagging?: It reduce the overfitting problem. It means Bagging handles the data have high variance and low bais. Bagging is not helpful in case of high bais.
