@@ -6,7 +6,8 @@ A. What is Bagging ?:
 1. It is an ensemble machine learning technique. 
 2. It creates a tree based model on bootstrap sampling with replacement. 
 3. Each vote are collected from the model and majority vote will be considered as a final output.
-4. It is a bootstrap sampling + aggregation(aggragation of vote)
+4. It is a bootstrap sampling + aggregation(aggragation of vote).
+5. While creating model, Equal weights are assigned to each data.
 
 B. Purpose of using Bagging:
 It takes a models with high variance and low bias and reduce their variance without decreasing their bais.
@@ -31,6 +32,7 @@ F. What are the pro and cons of Bagging?: It reduce the overfitting problem. It 
 A. What is Boosting ?:
 1. It is an ensemble machine learning technique.
 2. It is a process that uses a set of machine learning algorithms to combine weak learners and form a strong learn in order to increase the accuracy of the model.
+3. While creating a model, equal weights are assigned on first iteration later on weights are assigned on the performance on each iteration.
 
 B. Purpose of Boosting ?:
 It takes a models with high bias and low variance and reduce their bias without decreasing their variance.
@@ -53,5 +55,32 @@ D. How Does Boosting Algorithm works ?:
 6.Collecting the output.
 7.Considering the majority vote as a final output.
 
-E. Types of Boosting ?
+E. Types of Boosting ?: Boosting has a three techniques:Adaboost, Gradient Boosting and XGBoosting
+1. AdaBoost: 
+2. Gradient Boosting
+3. XGBoosting
+
+F: How AdaBoosting is working ?
+1. We have a dataset
+2. Assigning equal weights to each observation
+3. Finding best base learner
+-Creating stumps or  base learners sequentially
+-Computing Gini impurity or Entropy
+-Whichever the learner have less impurity will be selecting as base learner
+4. Train a model with base learner
+5. Predicted on the model
+6. Counting  Misclassification data
+7. Computing Misclassification Error - Total error = sum(Weight of misclassified data)
+8. Computing performance of the stumps - Performance of stumps = 1/2*Log-e(1-total error/total error)
+9. Update the weights of incorrectly classified data - New Weight = Old Weight * Exp^performance of stump
+    Updating the weights of correctly classified data - New Weight = Old Weight *  e^-performance of stump
+10. Normalize the weight
+11. Creating buckets on normalize weight
+12. Algorithm generating random number equals to number of observations
+13. Selecting where the random numbers fall in the buckets
+14. Creating a new data
+15. Running 2 to 14 steps above mentioned on each iteration until it each its limit
+16. Prediction on the model with new data
+17. Collecting votes from each base model
+18. Majority vote will be considered as final output
 
