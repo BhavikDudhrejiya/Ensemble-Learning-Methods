@@ -100,3 +100,31 @@ How Gradient Boosting works ?
 9. Point 5 to 9 are a iterations. Each iteration decision tree will be added sequentially and prediction the salary.
    - Salary Prediction = Base Learner Prediction + Learning Rate*Decision Tree Residual Prediction1 + Learning Rate*Decision Tree Residual Prediction 2 + Learning Rate*Decision      Tree Residual Prediction...n
 10. Testing the data - Testing data will be giving to the model which have minimum residual while prediction in iteration.
+
+# Extreme Gradient Boosting
+
+What is Extreme Graddient Boosting ?
+- It is a open source software library which provides a gradient boosting frame work. 
+- It implementing gradient boosting decision tree algorithm.
+- It using gradient boosting algorithm to minimize the loss when adding a new model.
+- It is used both in regression and classification problem.
+
+How Extreme Gradient Boosting works ?
+1. We have a Data
+2. Constructing Base Model
+3. Base learner takes probability 0.5 & computing residual
+4. Constructing Decision as per below 
+      Computing Similarity Weights: ∑(Residual)^2 / ∑P(1-P) + lambda
+    - Computing Similarity Weight of Root Node
+    - Computing Similarity Weight of left side decision node & its leaf node
+    - Computing Similarity Weight of right side decision node & its leaf node
+
+      Computing Gain = Leaf1 Similarity W + Leaf2 Similarity W - Root Node Similarity W
+    - Computing Gain of Root Node & left side of decision node and its leaf node
+    - Computing Gain of Root Node & right side of decision node and its leaf node
+    - Computing Gain of other combination of features of decision node and its leaf node
+    - Selecting the Root Node, Decision node and leaf node have high information gain
+5. Predicting the probability = Sigmoid(log(odd) of Prediction of Base Learner + learning rate(Prediction of Decision Tree))
+6. Predicting residual = Previous residual - Predicted Probability
+7. Running the iteration from point 2 to 6 and at the end of the iteration, The residual will be the minimal.
+8. Test Prediction on the model of iteration have minimal residual
