@@ -84,3 +84,19 @@ F: How AdaBoosting is working ?
 17. Collecting votes from each base model
 18. Majority vote will be considered as final output
 
+# Gradient Boosting
+
+How Gradient Boosting works ?
+1. We have a Data.
+2. Creating Base Learner.
+3. Predicting Salary from base learner.
+4. Computing loss function and extract residual.
+5. Adding Sequential Decision Tree.
+6. Predicting residual by giving experience and salary as predictors and residual as a target.
+7. Predicting Salary from base learner prediction of salary and decision tree prediction of residual.
+    - Salary Prediction = Base Learner Prediction + Learning Rate*Decision Tree Residual Prediction
+    - Learning Rate will be in the range of 0 to 1
+8. Computing loss function and extract residual.
+9. Point 5 to 9 are a iterations. Each iteration decision tree will be added sequentially and prediction the salary.
+   - Salary Prediction = Base Learner Prediction + Learning Rate*Decision Tree Residual Prediction1 + Learning Rate*Decision Tree Residual Prediction 2 + Learning Rate*Decision      Tree Residual Prediction...n
+10. Testing the data - Testing data will be giving to the model which have minimum residual while prediction in iteration.
