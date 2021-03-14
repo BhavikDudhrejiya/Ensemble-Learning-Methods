@@ -1,31 +1,63 @@
-# Ensemble-Learning-Methods
+# Ensemble-Learning
 
+**What is Ensemble Learning ?**
+- Ensemble Learning is a method that is used to enhance the performance of machine learning model by combining several leaners. 
+- When compared to a single model, this type of learning builds models with improved efficiency and accuracy.
+
+**Types of Ensemble Learning**
+- Bagging (parallel processing)
+- Boosting (It is a Sequential processing)
+- Stacking & Blending
+- Voting Classifier
+
+**Types of Ensembling**
+- **Averaging**: Taking the average of predictions from models in case of regression problem or while predicting probabilities for the classification problem.
+- **Majority Vote**: Taking the prediction with maximum vote / recommendation from multiple models predictions while predicting the outcomes of a classification problem.
+- **Weighted Average**: In this, different weights are applied to predictions from multiple models then taking the average which means giving high or low importance to specific model output.
+
+**Types of Bagging**
+- Random forest
+- Bagging meta-estimator
+
+**Types of Boosting**
+- AdaBoost
+- GBM
+- XGBM
+- Light GBM
+- CatBoost
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Bagging
 
-A. What is Bagging ?: 
-1. It is an ensemble machine learning technique. 
-2. It creates a tree based model on bootstrap sampling with replacement. 
-3. Each vote are collected from the model and majority vote will be considered as a final output.
-4. It is a bootstrap sampling + aggregation(aggragation of vote).
-5. While creating model, Equal weights are assigned to each data.
+**What is Bagging ?**
+- It is an ensemble machine learning technique. 
+- It creates a tree based model on bootstrap sampling with replacement. 
+- Each vote are collected from the model and majority vote will be considered as a final output.
+- It is a bootstrap sampling + aggregation(aggragation of vote).
+- While creating model, Equal weights are assigned to each data.
 
-B. Purpose of using Bagging:
-It takes a models with high variance and low bias and reduce their variance without decreasing their bais.
+**Purpose of using Bagging**
+- It takes a models with high variance and low bias and reduce their variance without decreasing their bais.
 
-C. What is Bootstrap ?:
-1. Boostrap refers to a random sampling with replacement. 
-2. It allows us to better understand the bias and the variance with the dataset. 
-3. It involves random sampling of small subset of data from the dataset. This subset can be replace. 
-4. The selection of all the example in the dataset has equal probability. 
-5. This method can help to better understand the mean and standand deviation from the dataset.
+**What is Bootstrap ?**
+- Boostrap refers to a random sampling with replacement. 
+- It allows us to better understand the bias and the variance with the dataset. 
+- It involves random sampling of small subset of data from the dataset. This subset can be replace. 
+- The selection of all the example in the dataset has equal probability. 
+- This method can help to better understand the mean and standand deviation from the dataset.
 
-D. What is Sample with Replacement ?:
-Selecting same observation multiple time.
+**What is Sample with Replacement ?**
+- Selecting same observation multiple time.
 
-E. What is Aggregation ?:
-Aggregate the outcome to each sample to estimate the most possible accurate statistics for overall sample.
+**What is Aggregation ?**
+- Aggregate the outcome to each sample to estimate the most possible accurate statistics for overall sample.
 
-F. What are the pro and cons of Bagging?: It reduce the overfitting problem. It means Bagging handles the data have high variance and low bais. Bagging is not helpful in case of high bais.
+**What are the pro and cons of Bagging?**
+- It reduce the overfitting problem. 
+- It means Bagging handles the data have high variance and low bais. 
+- Bagging is not helpful in case of high bais.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # Boosting
 
